@@ -1,0 +1,36 @@
+<template>
+    <div class="recipe">
+        <div class="card">
+            <div class="card-image">
+                <figure class ="image is-square">
+                    <img :src="recipe.image" alt="Placeholder image"/>
+                </figure>
+            </div>
+            <div class="card-content">
+                <div class="media-content">
+                    <p class="title is-4">{{ recipe.title }}</p>
+                    <p class="subtitle is 6"> Etapes de la recette </p>
+                    <div v-for="instructions in recipe.analyzedInstructions" :key="instructions.name">
+                        <div v-for="step in instructions.steps" :key="step.number">
+                            <p> Etape numero {{step.number}} : {{step.step}}</p>
+                        </div>
+                    </div>
+                </div>   
+            </div>
+        </div>
+    </div>
+</template>
+<script>
+export default {
+    name:"Recipe",
+    props: {
+        recipe: {}
+    },
+}
+
+</script>
+<style scoped>
+.recipe {
+    padding : 10px;
+}
+</style>

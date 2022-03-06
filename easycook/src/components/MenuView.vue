@@ -34,10 +34,10 @@
             Menus
           </a>
           <div class="navbar-dropdown">
-            <!--<router-link class="navbar-item">
+            <router-link class="navbar-item" to="/random">
               Recette aléatoire
             </router-link>
-            <router-link class="navbar-item">
+            <!--<router-link class="navbar-item">
               Recherche recettes par nom
             </router-link>
             <router-link class="navbar-item">
