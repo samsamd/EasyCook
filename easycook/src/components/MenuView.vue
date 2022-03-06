@@ -1,7 +1,7 @@
 <template>
   <nav class="navbar box" role="navigation" aria-label="main navigation">
     <div class="navbar-brand">
-      <a>
+      <a href="/">
         <img
           class="navbar-brand-img"
           src="../assets/logo-easy-cook.png"
@@ -34,7 +34,7 @@
             Menus
           </a>
           <div class="navbar-dropdown">
-            <router-link class="navbar-item">
+            <!--<router-link class="navbar-item">
               Recette aléatoire
             </router-link>
             <router-link class="navbar-item">
@@ -42,7 +42,7 @@
             </router-link>
             <router-link class="navbar-item">
               Recherche recette par ingrédient
-            </router-link>
+            </router-link> -->
             
             <hr class="navbar-divider" />
             <router-link class="navbar-item" to="/about">
