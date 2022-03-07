@@ -33,4 +33,7 @@ export default {
 .recipe {
     padding : 10px;
 }
+.image.is-square {
+    padding-top : 50%;
+}
 </style>
