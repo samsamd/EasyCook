@@ -37,12 +37,10 @@
             <router-link class="navbar-item" to="/random">
               Recette aléatoire
             </router-link>
-            <!--<router-link class="navbar-item">
-              Recherche recettes par nom
+            <router-link class="navbar-item" to="/research">
+              Recherche recettes
             </router-link>
-            <router-link class="navbar-item">
-              Recherche recette par ingrédient
-            </router-link> -->
+            
             
             <hr class="navbar-divider" />
             <router-link class="navbar-item" to="/about">

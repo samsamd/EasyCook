@@ -9,7 +9,7 @@
             <div class="card-content">
                 <div class="media-content">
                     <p class="title is-4">{{ recipe.title }}</p>
-                    <p class="subtitle is 6"> Etapes de la recette </p>
+                    <router-link :to ="{ name: 'Details', params: {id: recipe.id, name: recipe.title} }" tag="button" > Etapes de la recette </router-link>
                     <div v-for="instructions in recipe.analyzedInstructions" :key="instructions.name">
                         <div v-for="step in instructions.steps" :key="step.number">
                             <p> Etape numero {{step.number}} : {{step.step}}</p>

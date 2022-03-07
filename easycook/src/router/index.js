@@ -2,6 +2,8 @@ import { createRouter, createWebHistory } from 'vue-router'
 import AboutPage from '../components/AboutPage.vue'
 import HomePage from '../components/HomePage'
 import RandomRecipe from '../components/RandomRecipe'
+import ResearchRecipe from '../components/ResearchRecipe'
+import RecipeDetails from '../components/RecipeDetails'
 
 const routes = [
     {
@@ -18,6 +20,17 @@ const routes = [
         path: '/random',
         name: 'Random',
         component: RandomRecipe
+    },
+    {
+        path: '/research',
+        name: 'Research',
+        component: ResearchRecipe
+    },
+    {
+        path: '/details/:id/:name',
+        name: 'Details',
+        component: RecipeDetails,
+        props: true
     }
 ]
 
