@@ -42,7 +42,6 @@ export default {
   },
   methods: {
     async loadRandom() {
-
       this.loading = false;
       try {
         const response = await axios
@@ -50,9 +49,8 @@ export default {
       console.error(response);
       this.recipes = response.data.recipes;
       } catch (e) {
-        console.error(e);
+        console.error('Erreur lors de la récupération de la recette aléatoire du à l erreur suivante : ',e);
       }
-      console.error(this.recipes);
       this.loading = false;
     }
   }
