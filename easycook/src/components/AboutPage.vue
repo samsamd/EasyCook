@@ -6,7 +6,9 @@
           À propos
         </h1>
         <h2 class="subtitle">
-          Bienvenue sur EasyCook, l'appli pour trouver les recettes faciles et gourmandes !
+          Bonjour, nous sommes DEFOSSE Samuel et THIVET Simon, les créateurs de EasyCook ! <br>
+          EasyCook est une application créée dans le contexte de notre formation M2 MIAGE ISI dans le module développement mobile, 
+          où il nous a été demandé d'effectuer une application android/vueJS qui met en application l'ensemble des notions vu en cours. 
         </h2>
       </div>
     </div>
