@@ -46,7 +46,6 @@ export default {
       try {
         const response = await axios
       .get("https://api.spoonacular.com/recipes/random?number=1&apiKey=6523e06f5bcf4f019029724b4e55407f");
-      console.error(response);
       this.recipes = response.data.recipes;
       } catch (e) {
         console.error('Erreur lors de la récupération de la recette aléatoire du à l erreur suivante : ',e);
