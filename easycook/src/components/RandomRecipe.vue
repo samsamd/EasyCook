@@ -27,7 +27,7 @@ import Recipe from "./Recipe.vue";
 import axios from "axios";
 
 export default {
-  name: "AboutPage",
+  name: "RandomRecipe",
   components: {
     Recipe
   },
