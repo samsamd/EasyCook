@@ -20,6 +20,7 @@
                         </p>
                         <p class="is-italic"> Instructions : <br> </p>
                         <p> {{step.step}} </p>
+                        <button @click="speak(step.step)">Lire les instructions</button>
                     </div>
                 </div>
             </div>
@@ -31,6 +32,7 @@
 
 <script>
 import axios from "axios";
+import {TextToSpeech} from '@capacitor-community/text-to-speech'
 export default {
     name: "RecipeDetails",
     props: {
@@ -52,6 +54,13 @@ export default {
         .catch ((e) => {
         console.error('Erreur lors de la récupération des instructions : ',e);
         })
+    },
+    methods : {
+        async speak(step) {
+            await TextToSpeech.speak({
+                text: step,
+            });
+        }
     }
 }
 </script>
