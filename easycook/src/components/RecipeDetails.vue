@@ -31,12 +31,12 @@
 </template>
 
 <script>
-import axios from "axios";
+import service from "../services/easyCookServices"
 import {TextToSpeech} from '@capacitor-community/text-to-speech'
 export default {
     name: "RecipeDetails",
     props: {
-        id: Number,
+        id: String,
         name: String
     },
     data() {
@@ -45,15 +45,8 @@ export default {
         }     
     },
     mounted() {
-        const url = "https://api.spoonacular.com/recipes/" + this.id + "/analyzedInstructions?apiKey=6523e06f5bcf4f019029724b4e55407f";
-        axios
-        .get(url)
-        .then((response) => {
-            this.recipeDetails = response.data
-        })
-        .catch ((e) => {
-        console.error('Erreur lors de la récupération des instructions : ',e);
-        })
+        service.getDetails(this.id).then((response => this.recipeDetails = response.data));
+        console.log(service.getDetails(this.id));
     },
     methods : {
         async speak(step) {

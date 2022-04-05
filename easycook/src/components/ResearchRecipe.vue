@@ -44,7 +44,7 @@
 
 <script>
 import Recipe from "./Recipe.vue";
-import axios from "axios";
+import service from "../services/easyCookServices"
 export default {
   name : "ResearchRecipe",
   components : {
@@ -61,14 +61,7 @@ export default {
   },
   methods: {
     async loadRecipesWithFilter(locationSelected,dietSelected){
-      try {
-        const response = await axios
-      .get(`https://api.spoonacular.com/recipes/complexSearch?cuisine=${locationSelected}&diet=${dietSelected}&apiKey=6523e06f5bcf4f019029724b4e55407f`);
-      this.recipes = response.data.results;
-      console.log(this.recipes);
-      } catch (e) {
-        console.error('Erreur lors de la récupération de la recette aléatoire du à l erreur suivante : ',e);
-      }
+      this.recipes = (await service.searchRecipe(locationSelected,dietSelected)).data.results;
     }
   }
 }
