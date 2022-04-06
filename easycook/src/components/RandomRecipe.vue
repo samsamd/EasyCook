@@ -3,12 +3,12 @@
     <div class="hero-body">
       <div class="container">
         <h1 class="title">
-          Recette aléatoire
+          Random recipe
         </h1>
         <button @click="loadRandom">
-          Générer une nouvelle recette
+          Generate a new recipe
         </button>
-        <div v-if="loading"> Chargement...</div>
+        <div v-if="loading"> Loading...</div>
         <div v-else>
           <div class="card-random">
             <Recipe 

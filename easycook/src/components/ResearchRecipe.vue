@@ -3,22 +3,22 @@
     <div class="hero-body">
       <div class="container">
         <h1 class="title">
-          Recherche de recettes
+          Recipes search
         </h1> 
         <div class ="columns is-multiline">
           <div class="selectCSS">
-          Localité : 
+          Location : 
           <select v-model="locationSelected">
-            <option disabled value="">Choisissez une localité</option>
+            <option disabled value="">Choose a location</option>
             <option v-for="location in locationFilter" v-bind:key="location" v-bind:value="location" >
               {{location}}
             </option>
           </select>
           </div>
           <div class="selectCSS">
-          Régime : 
+          Diet : 
           <select v-model="dietSelected">
-            <option disabled value="">Choisissez un régime</option>
+            <option disabled value="">Choose a diet</option>
             <option v-for="diet in dietFilter" v-bind:key="diet" v-bind:value="diet" >
               {{diet}}
             </option>

@@ -26,7 +26,7 @@
     <div class="navbar-menu" :class="{ 'is-active': mobileMenuActive }">
       <div class="navbar-start">
         <router-link class="navbar-item" to="/">
-          Accueil
+          Home
         </router-link>
         
         <div class="navbar-item has-dropdown is-hoverable">
@@ -35,23 +35,23 @@
           </a>
           <div class="navbar-dropdown">
             <router-link class="navbar-item" to="/random">
-              Recette aléatoire
+              Random recipe
             </router-link>
             <router-link class="navbar-item" to="/research">
-              Recherche recettes
+              Recipes search
             </router-link>
             
             
             <hr class="navbar-divider" />
             <router-link class="navbar-item" to="/about">
-              A propos
+              About
             </router-link>
             <a
               class="navbar-item"
               href="https://github.com/samsamd/EasyCook"
               target="github"
             >
-              Voir le code source
+              Source code
             </a>
           </div>
         </div>
@@ -59,10 +59,10 @@
 
       <div class="navbar-end">
         <div v-if="awake">
-          <button @click="allowSleep()"> Permettre le verouillage de l'écran </button>
+          <button @click="allowSleep()"> Keep the screen awake </button>
         </div>
         <div v-else>
-          <button @click="keepAwake()"> Empêcher le verouillage de l'écran </button>
+          <button @click="keepAwake()"> Allow the screen to sleep </button>
         </div>
       </div>
     </div>
