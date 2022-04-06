@@ -58,8 +58,11 @@
       </div>
 
       <div class="navbar-end">
-        <div class="navbar-item copyright">
-          Created by Univ-Nantes &copy;
+        <div v-if="awake">
+          <button @click="allowSleep()"> Permettre le verouillage de l'écran </button>
+        </div>
+        <div v-else>
+          <button @click="keepAwake()"> Empêcher le verouillage de l'écran </button>
         </div>
       </div>
     </div>
@@ -67,13 +70,25 @@
 </template>
 
 <script>
+import {KeepAwake} from '@capacitor-community/keep-awake'
 export default {
   name: "MenuView",
   data() {
     return {
+      awake : false,
       mobileMenuActive: false,
     };
   },
+  methods: {
+    async keepAwake() {
+      await KeepAwake.keepAwake();
+      this.awake = true;
+    },
+    async allowSleep() {
+      await KeepAwake.allowSleep();
+      this.awake = false;
+    }
+  }
 };
 </script>
 
