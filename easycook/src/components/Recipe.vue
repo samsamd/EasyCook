@@ -9,7 +9,7 @@
             <div class="card-content">
                 <div class="media-content">
                     <p class="title is-4">{{ recipe.title }}</p>
-                    <router-link :to ="{ name: 'Details', params: {id: recipe.id, name: recipe.title} }" tag="button" > Etapes de la recette </router-link>
+                    <router-link :to ="{ name: 'Details', params: {id: recipe.id, name: recipe.title} }" tag="button" > Recipes step </router-link>
                 </div>   
             </div>
         </div>
