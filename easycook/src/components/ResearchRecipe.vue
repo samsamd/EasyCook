@@ -24,8 +24,11 @@
             </option>
           </select>
           </div>
-          <button @click="loadRecipesWithFilter(locationSelected,dietSelected)">
-            Rechercher
+          <button class="button is-small" @click="loadRecipesWithFilter(locationSelected,dietSelected)">
+            Research
+          </button> 
+          <button class="button is-small" @click="resetFilters()">
+            Reset filters
           </button> 
         </div>
         <div>
@@ -62,6 +65,10 @@ export default {
   methods: {
     async loadRecipesWithFilter(locationSelected,dietSelected){
       this.recipes = (await service.searchRecipe(locationSelected,dietSelected)).data.results;
+    },
+    resetFilters() {
+      this.dietSelected = '';
+      this.locationSelected = '';
     }
   }
 }
